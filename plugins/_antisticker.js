@@ -1,5 +1,5 @@
 /*
-By : Aine
+By : GoldenZ
 */
 let handler = m => m
 
@@ -15,7 +15,7 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
       if (global.opts) {
         if (isAdmin || !isBotAdmin){		  
         }else{
-          m.reply('*Sticker detected*\nYou will in kick now..!!') // ganti text terserah kamu 
+          m.reply('*Sticker detected*\nSiap-Siap Di Keluarin dari Grup Bro..!!') // ganti text terserah kamu 
           this.groupParticipantsUpdate(m.chat, [m.sender], "remove")
         }return true
       }
