@@ -35,8 +35,9 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-Hai, %ucapan %name! 👋
-  
+*Hallo, %ucapan %name!* 👋
+jangan spam ya kak, kasih jeda 5 detik agar bot tidak delay!, okeh kak?
+ 
 *Waktu:* 
 %wib WIB
 %wita WITA
@@ -49,10 +50,10 @@ Hai, %ucapan %name! 👋
 *Level:* %level
 *XP:* %exp
 %readmore`.trimStart(),
-  header: ' *%category*',
+  header: ' *⌜%category⌟*',
   body: ' • %cmd %islimit %isPremium',
   footer: '\n',
-  after: `*Experimental Bot By*
+  after: `*Emilia Bot By*
 *%npmname* | %version
 ${'```%npmdesc```'}
 `,
@@ -157,9 +158,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'https://www.instagram.com/bayz.u/', 'Instagram', '', '', [
+    conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'https://www.instagram.com/bangreyy_54', 'Instagram', '', '', [
       ['Donate', '/donasi'],
-      ['Sewa Bot', '/sewa'],
       ['Owner', '/owner']
     ], m)
     /*let url = `https://telegra.ph/file/ab1df70dfd5c2bac64da1.jpg`.trim()
