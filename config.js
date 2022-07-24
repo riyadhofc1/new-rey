@@ -2,13 +2,11 @@ let fs = require('fs')
 let chalk = require('chalk')
 
 global.owner = [
-  ['6285159177022'],
-  ['6285159177022'],
-  ['6281377754080', 'Bayu Goldenz', true]
+  ['6289675134806', 'Rey', true]
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
-global.prems = ['6281377754080'] // Premium user has unlimited limit
+global.prems = ['6289675134806'] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -40,8 +38,8 @@ process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0
 const spack = fs.readFileSync("lib/exif.json")
 const stickerpack = JSON.parse(spack)
 if (stickerpack.spackname == '') {
-  var sticker_name = '@GoldenZ_bot'
-  var sticker_author = 'GoldenZ'
+  var sticker_name = '@bangreyy_54'
+  var sticker_author = 'Emilia-MD'
 } else {
   var sticker_name = stickerpack.spackname
   var sticker_author = stickerpack.sauthor
@@ -58,7 +56,7 @@ fs.watchFile(file_exif, () => {
 // Sticker WM
 global.packname = sticker_name
 global.author = sticker_author
-global.wm = '@GoldenZ_Bot'
+global.wm = 'Emilia-MD'
 
 global.multiplier = 1000 // The higher, The harder levelup
 
